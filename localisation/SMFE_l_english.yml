@@ -1,0 +1,80 @@
+﻿l_english:
+
+#	---------------------------
+#	Fallen Empire Personalities
+#	---------------------------
+
+
+
+#	---------------------------
+#	Fallen Empire Events
+#	---------------------------
+
+
+#	---------------------------
+#	Subject States
+#	---------------------------
+
+
+
+#	---------------------------
+#	Fallen Empire Messages
+#	---------------------------
+
+ MILITARIST_FE_CONTACT:0 ""
+
+ MILITARIST_AE_CONTACT_GUARDIANS:0 ""
+
+
+#	---------------------------
+#	Fallen Empire War Demands
+#	---------------------------
+
+
+#	---------------------------
+#	Opinion Modifiers
+#	---------------------------
+
+
+#	---------------------------
+#	Fallen Empire Jobs
+#	---------------------------
+
+
+#	---------------------
+#	Fallen Empire Systems
+#	---------------------
+
+#Militarist
+ NAME_Emerald_Colosseum:0 "Emerald Colosseum"
+ NAME_Empryean_Fortress:0 "Empreyan Fortress"
+ NAME_Ancient_Redoubt:0 "Ancient Redoubt"
+ NAME_Royal_Arsenal:0 "Royal Arsenal"
+ NAME_Sword:0 "Sword"
+ NAME_Shield:0 "Shield"
+ NAME_Victory:0 "Victory"
+ NAME_Ascendancy:0 "Ascendancy"
+ NAME_Garrison:0 "Garrison"
+ NAME_Conquest:0 "Conquest"
+ NAME_Honour:0 "Honour"
+ NAME_Armoury:0 "Armory"
+ NAME_Fortress:0 "Fortress"
+ NAME_Soldier's_Valor:0 "Soldier's Valour"
+ NAME_Palladium_Fortress:0 "Palladium Fortress"
+ NAME_Distinction:0 "Distinction"
+ NAME_Bravery:0 "Bravery"
+ NAME_Discipline:0 "Discipline"
+ NAME_Warrior:0 "Warrior"
+ NAME_Soldier:0 "Soldier"
+ NAME_Champion:0 "Champion"
+
+
+#	--------------------------
+#	Fallen Empire Juggernauts
+#	--------------------------
+
+ NAME_Warsmith_Juggernaut:0 "Warsmith Juggernaut"
+
+#	---------------------------
+#	Other
+#	---------------------------

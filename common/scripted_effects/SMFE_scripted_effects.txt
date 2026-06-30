@@ -1,0 +1,123 @@
+create_militarist_fallen_empire_starting_navy = {
+
+	create_fallen_empire_starting_battle_fleet = yes
+	create_fallen_empire_starting_battle_fleet = yes
+	create_fallen_empire_starting_battle_fleet = yes
+	random = {
+		chance = value:fe_starting_second_fleet_chance
+		create_fallen_empire_starting_battle_fleet = yes
+	}
+
+	if = {
+		limit = {
+			host_has_dlc = "Apocalypse"
+		}
+		random = {
+			chance = value:fe_starting_first_colossus_chance
+			create_fleet = {
+				effect = {
+					set_owner = prev.owner
+					create_fallen_empire_colossus = yes
+					set_location = {
+						target = prev
+						distance = 30
+						angle = random
+					}
+				}
+			}
+		}
+		random = {
+			chance = value:fe_starting_second_colossus_chance
+			create_fleet = {
+				effect = {
+					set_owner = prev.owner
+					create_fallen_empire_colossus = yes
+					set_location = {
+						target = prev
+						distance = 45
+						angle = random
+					}
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			host_has_dlc = "Federations"
+		}
+		random = {
+			chance = value:fe_starting_first_colossus_chance
+			create_fleet = {
+				effect = {
+					set_owner = prev.owner
+					create_militarist_fallen_empire_juggernaut = yes
+					set_location = {
+						target = prev
+						distance = 30
+						angle = random
+					}
+				}
+			}
+		}
+		random = {
+			chance = value:fe_starting_second_colossus_chance
+			create_fleet = {
+				effect = {
+					set_owner = prev.owner
+					create_militarist_fallen_empire_juggernaut = yes
+					set_location = {
+						target = prev
+						distance = 45
+						angle = random
+					}
+				}
+			}
+		}
+	}
+	create_fleet = {
+		effect = {
+			set_owner = prev.owner
+			create_fallen_empire_construction_ship = yes
+			set_location = {
+				target = prev
+				distance = 60
+				angle = random
+			}
+		}
+	}
+	create_fleet = {
+		effect = {
+			set_owner = prev.owner
+			create_fallen_empire_construction_ship = yes
+			set_location = {
+				target = prev
+				distance = 80
+				angle = random
+			}
+		}
+	}
+	create_fleet = {
+		effect = {
+			set_owner = prev.owner
+			create_fallen_empire_construction_ship = yes
+			set_location = {
+				target = prev
+				distance = 100
+				angle = random
+			}
+		}
+	}
+}
+
+create_militarist_fallen_empire_juggernaut = {
+	if = {
+		limit = {
+			owner = { has_ethic = ethic_fanatic_militarist }
+		}
+		create_ship = {
+			name = random
+			design = "NAME_Warsmith_Juggernaut"
+			graphical_culture = fallen_empire_militarist
+		}
+	}
+}

@@ -1,0 +1,129 @@
+objectTypes = {
+
+	pdxmesh = {
+		name = "fallen_empire_juggernaut_frame_mesh"
+		file = "gfx/models/ships/juggernauts/molluscoid_01/molluscoid_01_juggernaut_frame.mesh"
+		cull_distance = 99999999.0f
+		animation = { id = "idle"	type = "molluscoid_01_juggernaut_frame_idle_animation"	}
+		animation = { id = "death"	type = "molluscoid_01_juggernaut_frame_death_animation"	}
+	}
+
+	pdxmesh = {
+		name = "fallen_empire_01_juggernaut_mesh"
+		file = "gfx/models/ships/juggernaut/fallen_empire_01/fallen_empire_juggernaut.mesh"
+		cull_distance = 99999999.0f
+
+		meshsettings = {
+			name = "Colossus"
+			index = 0
+			texture_diffuse = "fallen_empire_01_colossus_diffuse.dds"
+			texture_normal = "fallen_empire_01_colossus_normal.dds"
+			texture_specular = "fallen_empire_01_colossus_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+
+	###FALLEN EMPIRE 02 SET###
+
+	pdxmesh = {
+		name = "fallen_empire_02_juggernaut_mesh"
+		file = "gfx/models/ships/juggernaut/fallen_empire_01/fallen_empire_01_juggernaut.mesh"
+		cull_distance = 99999999.0f
+
+		meshsettings = {
+			name = "Colossus"
+			index = 0
+			texture_diffuse = "fallen_empire_02_colossus_diffuse.dds"
+			texture_normal = "fallen_empire_01_colossus_normal.dds"
+			texture_specular = "fallen_empire_01_colossus_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+
+	### FALLEN EMPIRE 03 SET ###
+
+	pdxmesh = {
+		name = "fallen_empire_03_juggernaut_mesh"
+		file = "gfx/models/ships/juggernaut/fallen_empire_01/fallen_empire_01_juggernaut.mesh"
+		cull_distance = 99999999.0f
+
+		meshsettings = {
+			name = "Colossus"
+			index = 0
+			texture_diffuse = "fallen_empire_03_colossus_diffuse.dds"
+			texture_normal = "fallen_empire_01_colossus_normal.dds"
+			texture_specular = "fallen_empire_01_colossus_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+
+	### FALLEN EMPIRE 04 SET ###
+
+	pdxmesh = {
+		name = "fallen_empire_04_juggernaut_mesh"
+		file = "gfx/models/ships/juggernaut/fallen_empire_01/fallen_empire_01_juggernaut.mesh"
+		cull_distance = 99999999.0f
+
+		meshsettings = {
+			name = "Colossus"
+			index = 0
+			texture_diffuse = "fallen_empire_04_colossus_diffuse.dds"
+			texture_normal = "fallen_empire_01_colossus_normal.dds"
+			texture_specular = "fallen_empire_01_colossus_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+
+	### FALLEN EMPIRE 05 SET (Militarist) ###
+
+	pdxmesh = {
+		name = "fallen_empire_militarist_juggernaut_mesh"
+		file = "gfx/models/ships/juggernaut/fallen_empire_01/fallen_empire_01_juggernaut.mesh"
+		cull_distance = 99999999.0f
+
+		meshsettings = {
+			name = "Colossus"
+			index = 0
+			texture_diffuse = "fallen_empire_militarist_colossus_01_diffuse.dds"
+			texture_normal = "fallen_empire_01_colossus_normal.dds"
+			texture_specular = "fallen_empire_militarist_colossus_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+
+	### FALLEN EMPIRE 06 SET (Authoritarian) ###
+
+	pdxmesh = {
+		name = "fallen_empire_authoritarian_juggernaut_mesh"
+		file = "gfx/models/ships/juggernaut/fallen_empire_01/fallen_empire_01_juggernaut.mesh"
+		cull_distance = 99999999.0f
+
+		meshsettings = {
+			name = "Colossus"
+			index = 0
+			texture_diffuse = "fallen_empire_authoritarian_colossus_01_diffuse.dds"
+			texture_normal = "fallen_empire_01_colossus_normal.dds"
+			texture_specular = "fallen_empire_01_colossus_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+
+
+	### FALLEN EMPIRE MACHINE SET ###
+
+	pdxmesh = {
+		name = "fallen_machine_empire_juggernaut_mesh"
+		file = "gfx/models/ships/juggernaut/fallen_empire_01/fallen_empire_01_juggernaut.mesh"
+		cull_distance = 99999999.0f
+
+		meshsettings = {
+			name = "Colossus"
+			index = 0
+			texture_diffuse = "fallen_machine_empire_01_colossus_diffuse.dds"
+			texture_normal = "fallen_machine_empire_01_colossus_normal.dds"
+			texture_specular = "fallen_machine_empire_01_colossus_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+}
+

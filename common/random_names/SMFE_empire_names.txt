@@ -1,0 +1,61 @@
+# Fallen Militarist
+empire_name_parts_list = {
+	key = "fallen_empire_names_militarist"
+	parts = {
+		"Vanguard" = 10
+		"Bulwark" = 10
+		"Command" = 10
+		"Dominion" = 10
+		"Imperium" = 10
+	}
+}
+
+# Awakened Militarist
+empire_name_parts_list = {
+	key = "awakened_empire_names_militarist"
+	parts = {
+		"Wardens" = 10
+		"Guardians" = 10
+		"Vigil" = 10
+		"Mandate" = 10
+		"Custodians" = 10
+		"Protectors" = 10
+		"Accord" = 10
+		"Aegis" = 10
+		"Shield" = 10
+		"Vanguard" = 10
+		"Bulwark" = 10
+	}
+}
+
+#----------------------------
+#-- Name Framework - SMFE --
+#----------------------------
+
+# Fallen Militarist
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_government = gov_stagnant_ascendancy
+			is_fanatic_militarist = yes
+		}
+	}
+	format = "{[This.GetSpeciesName] {<fallen_empire_names_militarist>}}"
+	noun = "{[This.GetSpeciesName]}"
+}
+
+# Awakened Militarist
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			has_government = gov_awakened_ascendancy
+			is_fanatic_militarist = yes
+		}
+	}
+	format = "{[This.GetSpeciesName] {<awakened_empire_names_militarist>}}"
+	noun = "{[This.GetSpeciesName]}"
+}

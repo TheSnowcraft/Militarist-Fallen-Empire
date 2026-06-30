@@ -1,0 +1,418 @@
+### FALLEN EMPIRE HOME SYSTEMS ###
+# Home System Militarist
+fallen_militarist = {
+	usage = fallen_empire_init
+	class = "rl_standard_stars"
+	flags = { ancient_wonders_system }
+	
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 185
+	}
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+
+	planet = {
+		class = "pc_molten"
+		orbit_distance = 35
+		orbit_angle = { min = 90 max = 270 }
+		size = { min = 12 max = 18 }
+		has_ring = no
+
+	}
+
+	# Fortress World, Emerald Colosseum
+	planet = {
+		name = "NAME_Emerald_Colosseum"
+		class = "pc_gaia"
+		size = 16
+		orbit_distance = 20
+		orbit_angle = 50
+		deposit_blockers = none
+
+		init_effect = {
+				set_carrier_flag = fallen_empire_world
+				prevent_anomaly = yes
+				set_owner = root
+				set_controller = root
+
+				while = {
+					count = 10
+					add_district = district_city
+				}
+				while = {
+					count = 18
+					create_pop_group = {
+						species = owner_main_species
+					}
+				}
+				while = {
+					count = 18
+					create_pop_group = {
+						species = event_target:fe_servants
+					}
+				}
+
+				add_zone = {
+					district = district_city
+					zone = zone_foundry
+				}
+				add_zone = {
+					district = district_city
+					zone = zone_fortress
+				}
+
+				add_building = building_ancient_palace
+				add_building = building_affluence_center
+				add_building = building_fe_market_2
+
+				add_building = {
+					zone = zone_foundry
+					building = building_nano_forge
+				}
+				add_building = {
+					zone = zone_foundry
+					building = building_dimensional_fabricator
+				}
+				add_building = {
+					zone = zone_foundry
+					building = building_dimensional_fabricator
+				}
+				add_building = {
+					zone = zone_fortress
+					building = building_fe_stronghold
+				}
+				add_building = {
+					zone = zone_fortress
+					building = building_fe_stronghold
+				}
+				add_building = {
+					zone = zone_fortress
+					building = building_planetary_shield_generator
+				}
+			}
+	}
+
+	# Capital, Empreyan Fortress
+	planet = {
+		name = "NAME_Empryean_Fortress"
+		class = "pc_gaia"
+		orbit_distance = 20
+		orbit_angle = { min = 90 max = 270 }
+		size = 25
+		has_ring = yes
+		deposit_blockers = none
+
+		moon = {
+			name = "NAME_Ancient_Redoubt"
+			class = "pc_barren_cold"
+			orbit_distance = 12
+			orbit_angle = { min = 90 max = 270 }
+			size = 12
+		}
+
+		init_effect = {
+			create_cluster = {
+				id = fe4_cluster
+				radius = 100
+				center = this.solar_system
+			}
+
+			set_carrier_flag = fallen_empire_world
+			set_carrier_flag = fallen_empire_capital
+			set_carrier_flag = mfe_militarist_fe_capital
+			prevent_anomaly = yes
+			set_owner = root
+			set_controller = root
+			set_capital = yes
+
+			inline_script = {
+				script =  game_start/districts_standard_setup
+				CITY = 19
+				GENERATOR = 2
+				MINING = 2
+				FARMING = 2
+			}
+			while = {
+				count = 62
+				create_pop_group = {
+					species = owner_main_species
+				}
+			}
+			root = { create_fe_servant_species = yes }
+			last_created_species = { save_event_target_as = fe_servants }
+			while = {
+				count = 62
+				create_pop_group = {
+					species = event_target:fe_servants
+				}
+			}
+			create_militarist_fallen_empire_starting_navy = yes
+
+			while = {
+				count = 20
+				create_army = {
+					name = random
+					owner = root
+					species = root
+					type = "gene_warrior_army"
+				}
+			}
+
+				add_zone = {
+					district = district_city
+					zone = zone_industrial
+				}
+				add_zone = {
+					district = district_city
+					zone = zone_fortress
+				}
+				inline_script = "game_start/fe_buildings_rural"
+
+				add_building = building_ancient_palace
+				add_building = building_fe_dome
+				add_building = building_fe_administration_2
+				add_building = building_fe_security_2
+				add_building =building_fe_market_2
+
+				add_building = {
+					zone = zone_industrial
+					building = building_nano_forge
+				}
+				add_building = {
+					zone = zone_industrial
+					building = building_affluence_center
+				}
+				add_building = {
+					zone = zone_industrial
+					building = building_dimensional_fabricator
+				}
+				add_building = {
+					zone = zone_fortress
+					building = building_fe_stronghold
+				}
+				add_building = {
+					zone = zone_fortress
+					building = building_fe_stronghold
+				}
+				add_building = {
+					zone = zone_fortress
+					building = building_planetary_shield_generator
+				}
+		}
+	}
+
+	# Forge World, Royal Arsenal
+	planet = {
+		name = "NAME_Royal_Arsenal"
+		class = "pc_gaia"
+		size = 13
+		orbit_distance = 20
+		orbit_angle = 50
+		deposit_blockers = none
+
+		init_effect = {
+				set_carrier_flag = fallen_empire_world
+				prevent_anomaly = yes
+				set_owner = root
+				set_controller = root
+
+				while = {
+					count = 10
+					add_district = district_city
+				}
+				while = {
+					count = 18
+					create_pop_group = {
+						species = owner_main_species
+					}
+				}
+				while = {
+					count = 18
+					create_pop_group = {
+						species = event_target:fe_servants
+					}
+				}
+
+				add_zone = {
+					district = district_city
+					zone = zone_foundry
+				}
+				add_zone = {
+					district = district_city
+					zone = zone_fortress
+				}
+
+				add_building = building_ancient_palace
+				add_building = building_affluence_center
+				add_building = building_fe_market_2
+
+				add_building = {
+					zone = zone_foundry
+					building = building_nano_forge
+				}
+				add_building = {
+					zone = zone_foundry
+					building = building_dimensional_fabricator
+				}
+				add_building = {
+					zone = zone_foundry
+					building = building_dimensional_fabricator
+				}
+				add_building = {
+					zone = zone_fortress
+					building = building_fe_stronghold
+				}
+				add_building = {
+					zone = zone_fortress
+					building = building_fe_stronghold
+				}
+				add_building = {
+					zone = zone_fortress
+					building = building_planetary_shield_generator
+				}
+			}
+	}
+	
+	planet = {
+		class = "pc_gas_giant"
+		orbit_distance = 35
+		orbit_angle = { min = 90 max = 270 }
+		size = 27
+		has_ring = yes
+		change_orbit = 5
+		moon = {
+			class = "pc_barren"
+			orbit_distance = 12
+			orbit_angle = { min = 90 max = 270 }
+			size = { min = 12 max = 18 }
+		}
+		moon = {
+			class = "pc_barren_cold"
+			orbit_distance = 6
+			orbit_angle = { min = 90 max = 270 }
+			size = { min = 12 max = 18 }
+		}
+
+	}
+
+	planet = {
+		class = "pc_gas_giant"
+		orbit_distance = 35
+		orbit_angle = { min = 90 max = 270 }
+		size = 22
+		change_orbit = 5
+		has_ring = no
+		moon = {
+			class = "pc_toxic"
+			orbit_distance = 12
+			orbit_angle = { min = 90 max = 270 }
+			size = { min = 12 max = 18 }
+		}
+		moon = {
+			class = "pc_frozen"
+			orbit_distance = 6
+			orbit_angle = { min = 90 max = 270 }
+			size = { min = 10 max = 16 }
+		}
+	}
+
+	change_orbit = 20
+
+	planet = {
+		count = { min = 3 max = 7 }
+		class = pc_ice_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 40 max = 100 }
+	}
+init_effect = {
+		while = {
+			count = 2
+			random_list = {
+				1 = {
+					set_global_flag = fe_militarist_orbital_1
+					modifier = {
+						factor = 0
+						has_global_flag = fe_militarist_orbital_1
+					}
+				}
+				1 = {
+					set_global_flag = fe_militarist_orbital_2
+					modifier = {
+						factor = 0
+						has_global_flag = fe_militarist_orbital_2
+					}
+				}
+				1 = {
+					set_global_flag = fe_militarist_orbital_3
+					modifier = {
+						factor = 0
+						has_global_flag = fe_militarist_orbital_3
+					}
+				}
+				1 = {
+					set_global_flag = fe_militarist_orbital_4
+					modifier = {
+						factor = 0
+						has_global_flag = fe_militarist_orbital_4
+					}
+				}
+				1 = {
+					set_global_flag = fe_militarist_orbital_5
+					modifier = {
+						factor = 0
+						has_global_flag = fe_militarist_orbital_5
+					}
+				}
+				1 = {
+					set_global_flag = fe_militarist_orbital_6
+					modifier = {
+						factor = 0
+						has_global_flag = fe_militarist_orbital_6
+					}
+				}
+			}
+		}
+	}
+
+	neighbor_system = {
+		trigger = { has_global_flag = fe_militarist_orbital_1 }
+		distance = { min = 0 max = 50 }
+		initializer = "fe_militarist_orbital_1"
+	}
+	neighbor_system = {
+		trigger = { has_global_flag = fe_militarist_orbital_2 }
+		distance = { min = 0 max = 50 }
+		initializer = "fe_militarist_orbital_2"
+	}
+	neighbor_system = {
+		trigger = { has_global_flag = fe_militarist_orbital_3 }
+		distance = { min = 0 max = 50 }
+		initializer = "fe_militarist_orbital_3"
+	}
+	neighbor_system = {
+		trigger = { has_global_flag = fe_militarist_orbital_4 }
+		distance = { min = 0 max = 50 }
+		initializer = "fe_militarist_orbital_4"
+	}
+	neighbor_system = {
+		trigger = { has_global_flag = fe_militarist_orbital_5 }
+		distance = { min = 0 max = 50 }
+		initializer = "fe_militarist_orbital_5"
+	}
+	neighbor_system = {
+		trigger = { has_global_flag = fe_militarist_orbital_6 }
+		distance = { min = 0 max = 50 }
+		initializer = "fe_militarist_orbital_6"
+	}
+
+	init_effect = {
+		create_fe_home_citadel = yes
+	}
+}

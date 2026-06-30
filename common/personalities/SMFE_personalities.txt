@@ -1,0 +1,77 @@
+fallen_empire_militarist = {
+	aggressiveness = 4.0
+	trade_willingness = 0.33
+	bravery = 4.0
+	combat_bravery = 10.0
+
+	threat_modifier = 0.0
+	threat_others_modifier = 0.33
+	friction_modifier = 0.0
+	claims_modifier = 10.0
+
+	behaviour = {
+		conqueror = no
+		subjugator = no
+		liberator = no
+		opportunist = no
+		slaver = no
+		uplifter = no
+		purger = no
+		dominator = no
+		infiltrator = no
+		robot_exploiter = no
+		robot_liberator = no
+		propagator = no
+		multispecies = no
+		isolationist = no
+	}
+
+	allow = {
+		is_country_type = fallen_empire
+		has_ethic = "ethic_fanatic_militarist"
+	}
+
+	weight_modifier = {
+		weight = 100
+	}
+}
+
+awakened_fallen_empire_militarist = {
+	aggressiveness = 4.0
+	trade_willingness = 0.33
+	bravery = 4.0
+	combat_bravery = 10.0
+
+	threat_modifier = 0.0
+	threat_others_modifier = 0.33
+	friction_modifier = 0.0
+	claims_modifier = 10.0
+
+	behaviour = {
+		conqueror = no
+		subjugator = no
+		liberator = no
+		opportunist = no
+		slaver = no
+		uplifter = no
+		purger = no
+		dominator = no
+		infiltrator = no
+		robot_exploiter = no
+		robot_liberator = no
+		propagator = no
+		multispecies = no
+		isolationist = no
+		crisis_fighter = yes
+		crisis_leader = yes 	# special for awakened fallen empires
+	}
+
+	allow = {
+		is_country_type = awakened_fallen_empire
+		has_ethic = "ethic_fanatic_militarist"
+	}
+
+	weight_modifier = {
+		weight = 100
+	}
+}
