@@ -1,0 +1,7 @@
+namespace = SMFE_debug
+
+observer_event = {
+	id = SMFE_debug.1
+	is_triggered_only = yes
+	desc = SMFE_debug.1.desc
+}

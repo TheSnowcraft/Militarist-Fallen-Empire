@@ -1,0 +1,133 @@
+awaken_guardians_of_the_galaxy = {
+	if = {
+		limit = {
+			any_country = {
+				is_country_type = fallen_empire
+				is_fanatic_militarist = yes
+				fleet_power > 60000
+			}
+		}
+		observer_event = { id = SMFE_debug.1 }
+		random_list = {
+
+			85 = { # Awaken only the Militarist FE
+				random_country = {
+					limit = {
+						is_country_type = fallen_empire
+						is_fanatic_militarist = yes
+						fleet_power > 60000
+					}
+
+					set_country_flag = guardians_of_the_galaxy
+					set_timed_country_flag = {
+						flag = timed_guardians_of_the_galaxy
+						days = 90
+					}
+					set_timed_country_flag = {
+						flag = timed_guardians_of_the_galaxy_2
+						days = 180
+					}
+				}
+			}
+
+			15 = { # Awaken all Guardians
+
+				# Militarist FE (Will awaken before the others)
+				every_country = {
+					limit = {
+						is_country_type = fallen_empire
+						is_fanatic_militarist = yes
+						fleet_power > 60000
+					}
+
+					set_country_flag = guardians_of_the_galaxy
+					set_timed_country_flag = {
+						flag = timed_guardians_of_the_galaxy
+						days = 90
+					}
+					set_timed_country_flag = {
+						flag = timed_guardians_of_the_galaxy_2
+						days = 180
+					}
+				}
+
+				# Other Guardian candidates
+				every_country = {
+					limit = {
+						is_country_type = fallen_empire
+						OR = {
+							is_fanatic_materialist = yes
+							is_fanatic_xenophile = yes
+							has_country_flag = fallen_empire_hive_war
+						}
+						fleet_power > 60000
+					}
+
+					set_country_flag = guardians_of_the_galaxy
+					set_timed_country_flag = {
+						flag = timed_guardians_of_the_galaxy
+						days = 1800
+					}
+					set_timed_country_flag = {
+						flag = timed_guardians_of_the_galaxy_2
+						days = 3600
+					}
+				}
+			}
+		}
+	}
+
+	else = {
+		random_list = {
+			60 = {
+				random_country = {
+					limit = {
+						is_country_type = fallen_empire
+						OR = {
+							is_fanatic_materialist = yes
+							is_fanatic_xenophile = yes
+							has_country_flag = fallen_empire_hive_war
+						}
+						fleet_power > 60000
+					}
+
+					set_country_flag = guardians_of_the_galaxy
+					set_timed_country_flag = {
+						flag = timed_guardians_of_the_galaxy
+						days = 1800
+					}
+					set_timed_country_flag = {
+						flag = timed_guardians_of_the_galaxy_2
+						days = 3600
+					}
+				}
+			}
+
+			15 = {
+				every_country = {
+					limit = {
+						is_country_type = fallen_empire
+						OR = {
+							is_fanatic_materialist = yes
+							is_fanatic_xenophile = yes
+							has_country_flag = fallen_empire_hive_war
+						}
+						fleet_power > 60000
+					}
+
+					set_country_flag = guardians_of_the_galaxy
+					set_timed_country_flag = {
+						flag = timed_guardians_of_the_galaxy
+						days = 1800
+					}
+					set_timed_country_flag = {
+						flag = timed_guardians_of_the_galaxy_2
+						days = 3600
+					}
+				}
+			}
+
+			25 = {}
+		}
+	}
+}
