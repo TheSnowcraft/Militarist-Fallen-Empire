@@ -2,9 +2,12 @@ create_militarist_fallen_empire_starting_navy = {
 
 	create_fallen_empire_starting_battle_fleet = yes
 	create_fallen_empire_starting_battle_fleet = yes
-	create_fallen_empire_starting_battle_fleet = yes
 	random = {
 		chance = value:fe_starting_second_fleet_chance
+		create_fallen_empire_starting_battle_fleet = yes
+	}
+	random = {
+		chance = value:fe_starting_third_fleet_chance
 		create_fallen_empire_starting_battle_fleet = yes
 	}
 
