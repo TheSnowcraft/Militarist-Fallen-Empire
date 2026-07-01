@@ -648,13 +648,13 @@ fe_militarist_orbital_3 = {
 				}
 				while = {
 					count = 18
-					create_pop = {
+					create_pop_group = {
 						species = owner_main_species
 					}
 				}
 				while = {
 					count = 18
-					create_pop = {
+					create_pop_group = {
 						species = event_target:fe_servants
 					}
 				}
@@ -992,13 +992,13 @@ asteroid_belt = {
 			}
 			while = {
 				count = 30
-				create_pop = {
+				create_pop_group = {
 					species = owner_main_species
 				}
 			}
 			while = {
 				count = 30
-				create_pop = {
+				create_pop_group = {
 					species = event_target:fe_servants
 				}
 
